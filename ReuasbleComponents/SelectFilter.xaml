@@ -1,0 +1,397 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="SelectFilterFrom_InjectionsTab" this:SelectFilterFrom_InjectionsTab.In_FilterName="Checkpoint_5_sirishaa" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.SAP;assembly=UiPath.UiAutomation.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="In_FilterName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>936,2696</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>SelectFilterFrom_InjectionsTab_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Activities.Runtime.Collections</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence sap:VirtualizedContainerService.HintSize="806,2631" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="744,2520" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <TryCatch.Try>
+        <Sequence DisplayName="SelectFilter" sap:VirtualizedContainerService.HintSize="706,2292" sap2010:WorkflowViewState.IdRef="Sequence_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="644,141" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[&quot;Filter name:&quot;+In_FilterName]" />
+          <Sequence DisplayName="Empower" sap:VirtualizedContainerService.HintSize="644,2000" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <Sequence.Variables>
+              <Variable x:TypeArguments="x:String" Name="vStr_SelectedFilterName" />
+            </Sequence.Variables>
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: WAT19 as System/Administrator - Project" sap:VirtualizedContainerService.HintSize="582,1889" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="f875a927-b31f-4ea9-90bf-3d4d228a2f0c" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="548,1598" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,297" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,218" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <ui:SetFocus DelayBefore="{x:Null}" DelayMS="{x:Null}" DisplayName="Set Focus 'ComboBox'" sap:VirtualizedContainerService.HintSize="388,107" sap2010:WorkflowViewState.IdRef="SetFocus_1">
+                            <ui:SetFocus.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="6296aa62-44e2-4374-8ed7-7389fe0f97d5" InformativeScreenshot="b5868704d275540a9973d76116e36751" Selector="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' cls='ComboBox' /&gt;" TimeoutMS="5000">
+                                <ui:Target.WaitForReady>
+                                  <InArgument x:TypeArguments="ui:WaitForReady" />
+                                </ui:Target.WaitForReady>
+                              </ui:Target>
+                            </ui:SetFocus.Target>
+                          </ui:SetFocus>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                    </ui:CommentOut>
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Open'" sap:VirtualizedContainerService.HintSize="486,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f875a927-b31f-4ea9-90bf-3d4d228a2f0c" Version="V3">
+                      <uix:NClick.Target>
+                        <uix:TargetAnchorable DesignTimeRectangle="1004, 63, 15, 19" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Open'" FullSelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl automationid='DropDown' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl automationid='DropDown' role='push button' check:text='Open' /&gt;" Guid="a070afb4-e0b6-4b26-9454-b8fe19e028c8" ImageBase64="" InformativeScreenshot="2cc6b43cff31daf7fee45a70e99771bb.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as System/Administrator - Project' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                      </uix:NClick.Target>
+                    </uix:NClick>
+                    <ucas:SelectMenuItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Menu Item 'combo box'" sap:VirtualizedContainerService.HintSize="486,160" sap2010:WorkflowViewState.IdRef="SelectMenuItem_2" Item="[In_FilterName]">
+                      <ucas:SelectMenuItem.Items>
+                        <scg:List x:TypeArguments="x:String" Capacity="64">
+                          <x:String>\Interactive System Suitability\!ADMINISTRATOR_RPA_ProMethodID</x:String>
+                          <x:String>\Interactive System Suitability\!gghhjrhht</x:String>
+                          <x:String>\Interactive System Suitability\!test</x:String>
+                          <x:String>\Interactive System Suitability\!test1</x:String>
+                          <x:String>\SQT_Testing\!ns</x:String>
+                          <x:String>\SQT_Testing\All Results by Date Acq.</x:String>
+                          <x:String>\SQT_Testing\All Results by Date Proc</x:String>
+                          <x:String>\SQT_Testing\All by Date Acq. (Detailed)</x:String>
+                          <x:String>\SQT_Testing\All by Date Proc. (Detailed)</x:String>
+                          <x:String>\SQT_Testing\Latest Result for Each Channel</x:String>
+                          <x:String>\SQT_Testing\Processed This Week</x:String>
+                          <x:String>\SQT_Testing\Processed Today</x:String>
+                          <x:String>\SQT_Testing\Select Sample Name</x:String>
+                          <x:String>\Valid_OQ1\numberofsignoffs</x:String>
+                          <x:String>\Valid_OQ1\standards</x:String>
+                          <x:String>\Valid_OQ1\today</x:String>
+                          <x:String>\Valid_OQApex\!standards</x:String>
+                          <x:String>\Valid_OQApex\!unknowns</x:String>
+                          <x:String>\Valid_OQApex\numberofsignoffs</x:String>
+                          <x:String>\Valid_OQApex\standards</x:String>
+                          <x:String>\Valid_OQApex\today</x:String>
+                          <x:String>!NoOfSignOff</x:String>
+                          <x:String>!cs</x:String>
+                          <x:String>!test</x:String>
+                          <x:String>Checkpoint_5_sirishaa</x:String>
+                          <x:String>Checkpoint_5_sirishaaa</x:String>
+                          <x:String>FTO3_RPA_DateProcessed</x:String>
+                          <x:String>FTOP_DateProcessed</x:String>
+                          <x:String>FTOP_SamplesetID</x:String>
+                          <x:String>Glenmark_RPA_DateProcessed</x:String>
+                          <x:String>NoOfSignOff</x:String>
+                          <x:String>Signpending_1</x:String>
+                          <x:String>Signpending_2</x:String>
+                          <x:String>Test_RPA_DateProcessed</x:String>
+                          <x:String>Default</x:String>
+                        </scg:List>
+                      </ucas:SelectMenuItem.Items>
+                      <ucas:SelectMenuItem.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="165cc2e3-8937-4eae-944a-59bee4aa324a" InformativeScreenshot="8e4aa5e0ef391a8a2a2f7854008e1d38" Selector="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as System/Administrator - Project' /&gt;&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl role='combo box' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ucas:SelectMenuItem.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ucas:SelectMenuItem>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NSelectItem DisplayName="Select Item 'Filter By'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_1" Item="[In_FilterName]" ScopeIdentifier="f875a927-b31f-4ea9-90bf-3d4d228a2f0c" Timeout="5000" Version="V3">
+                            <uix:NSelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="35">
+                                <x:String>\Interactive System Suitability\!ADMINISTRATOR_RPA_ProMethodID</x:String>
+                                <x:String>\Interactive System Suitability\!gghhjrhht</x:String>
+                                <x:String>\Interactive System Suitability\!test</x:String>
+                                <x:String>\Interactive System Suitability\!test1</x:String>
+                                <x:String>\SQT_Testing\!ns</x:String>
+                                <x:String>\SQT_Testing\All Results by Date Acq.</x:String>
+                                <x:String>\SQT_Testing\All Results by Date Proc</x:String>
+                                <x:String>\SQT_Testing\All by Date Acq. (Detailed)</x:String>
+                                <x:String>\SQT_Testing\All by Date Proc. (Detailed)</x:String>
+                                <x:String>\SQT_Testing\Latest Result for Each Channel</x:String>
+                                <x:String>\SQT_Testing\Processed This Week</x:String>
+                                <x:String>\SQT_Testing\Processed Today</x:String>
+                                <x:String>\SQT_Testing\Select Sample Name</x:String>
+                                <x:String>\Valid_OQ1\numberofsignoffs</x:String>
+                                <x:String>\Valid_OQ1\standards</x:String>
+                                <x:String>\Valid_OQ1\today</x:String>
+                                <x:String>\Valid_OQApex\!standards</x:String>
+                                <x:String>\Valid_OQApex\!unknowns</x:String>
+                                <x:String>\Valid_OQApex\numberofsignoffs</x:String>
+                                <x:String>\Valid_OQApex\standards</x:String>
+                                <x:String>\Valid_OQApex\today</x:String>
+                                <x:String>!NoOfSignOff</x:String>
+                                <x:String>!cs</x:String>
+                                <x:String>!test</x:String>
+                                <x:String>Checkpoint_5_sirishaa</x:String>
+                                <x:String>Checkpoint_5_sirishaaa</x:String>
+                                <x:String>FTO3_RPA_DateProcessed</x:String>
+                                <x:String>FTOP_DateProcessed</x:String>
+                                <x:String>FTOP_SamplesetID</x:String>
+                                <x:String>Glenmark_RPA_DateProcessed</x:String>
+                                <x:String>NoOfSignOff</x:String>
+                                <x:String>Signpending_1</x:String>
+                                <x:String>Signpending_2</x:String>
+                                <x:String>Test_RPA_DateProcessed</x:String>
+                                <x:String>Default</x:String>
+                              </scg:List>
+                            </uix:NSelectItem.Items>
+                            <uix:NSelectItem.Target>
+                              <uix:TargetAnchorable DesignTimeRectangle="56, 182, 240, 21" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'!glen_newfilter'" FullSelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl role='combo box' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl role='combo box' automationid='' /&gt;" Guid="c8aa93f4-029c-4ca2-a616-d95d4016188e" InformativeScreenshot="b1a7e786cee0b0eeae00cd6ace0e137a.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as System/Administrator - Project' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                <uix:TargetAnchorable.Anchors>
+                                  <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                    <uix:Target DesignTimeRectangle="14, 184, 42, 13" ElementType="Text" FriendlyName="'Filter By'" FullSelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd cls='Static' title='Filter By:' /&gt;&lt;ctrl name='Filter By:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd cls='Static' title='Filter By:' /&gt;&lt;ctrl name='Filter By:' role='text' automationid='' check:text='Filter By:' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                                  </scg:List>
+                                </uix:TargetAnchorable.Anchors>
+                              </uix:TargetAnchorable>
+                            </uix:NSelectItem.Target>
+                          </uix:NSelectItem>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'push button  Open'" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="476a753c-2094-41ad-b22f-a8b42a3c0dbc" InformativeScreenshot="90e63d9a78a42dda694a9f561c9fd9d6" Selector="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as System/Administrator - Project' /&gt;&lt;wnd ctrlid='20302' title='Project Window dialog bar' /&gt;&lt;wnd ctrlid='20302' /&gt;&lt;ctrl automationid='DropDown' /&gt;">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Click>
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="486,52" sap2010:WorkflowViewState.IdRef="CommentOut_3">
+                      <ui:CommentOut.Body>
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,268" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click Filter" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="f875a927-b31f-4ea9-90bf-3d4d228a2f0c" Version="V3">
+                            <uix:NClick.Target>
+                              <uix:TargetAnchorable CvTextArea="1, 248, 111, 13" CvTextArgument="Checkpoint 5 sirishaa" CvType="Text" DesignTimeRectangle="1, 248, 221, 13" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Checkpoint_5_sirishaa'" FullSelectorArgument="&lt;ctrl name='Checkpoint_5_sirishaa' role='list item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Checkpoint_5_sirishaa' role='list item' automationid='' check:text='Checkpoint_5_sirishaa' /&gt;" Guid="e37f0260-461e-4b2a-bb31-0eb62986443a" InformativeScreenshot="f9e20fdc6361d6e33f73b0e724e28a4f.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='ComboLBox' idx='*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                            </uix:NClick.Target>
+                          </uix:NClick>
+                        </Sequence>
+                      </ui:CommentOut.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:CommentOut>
+                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'list item'" sap:VirtualizedContainerService.HintSize="486,107" sap2010:WorkflowViewState.IdRef="Click_2" KeyModifiers="None" MouseButton="BTN_LEFT">
+                      <ui:Click.CursorPosition>
+                        <ui:CursorPosition Position="Center">
+                          <ui:CursorPosition.OffsetX>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetX>
+                          <ui:CursorPosition.OffsetY>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:CursorPosition.OffsetY>
+                        </ui:CursorPosition>
+                      </ui:Click.CursorPosition>
+                      <ui:Click.Target>
+                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="078c3907-6005-4b46-bc5c-f5b600767aa8" InformativeScreenshot="e12dc2addd9e98597963b7ab9facdbbd" Selector="[string.Format(&quot;&lt;wnd app='project.exe' cls='ComboLBox' idx='*' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, In_FilterName)]">
+                          <ui:Target.TimeoutMS>
+                            <InArgument x:TypeArguments="x:Int32" />
+                          </ui:Target.TimeoutMS>
+                          <ui:Target.WaitForReady>
+                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                          </ui:Target.WaitForReady>
+                        </ui:Target>
+                      </ui:Click.Target>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:Click>
+                    <Delay Duration="00:00:00.0100000" sap:VirtualizedContainerService.HintSize="486,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="486,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Selected filter: &quot; +In_FilterName]" />
+                  </Sequence>
+                </ActivityAction>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="-8, -8, 1376, 744" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVFhH7ZFBDoMwEAN5Ok/jZ7RmstEWOQmi0B5aS4Oi4DALTP90sg64Neu69lGH6vWxQoe6HLkuVtRDZzj6XuJBn+Ql9u3uRE7UxJbuRE7UxJZGTPNs948gJ2piSyN0dftHkBM1saUe2/X5Bc5+BTlRE1tqUVdlgDNDyIma2FKLKk67+f4R5ERNbMkh8bIsG9tODPNk3+0hJ2piS46vDhCrOoDEcbesoztCTtTElvZIUt88KG8fpDtd5ERNbCkTgtEA2kt3m8iJmthSJlbx+e0vKMSZHnKiJraUiYe/fIEk3Sj7caaHnKiJLe05MkDu95ATNbElRwxRf0HC9VvIiZrYUou6OikXcqImttSirr41wBXIiZrY0p3IiZrExqf55+czTQ9OnSFbNCa9OgAAAABJRU5ErkJggg==" InformativeScreenshot="d0c4048bff4747ba11f0de457c777a09.png" Selector="&lt;wnd app='project.exe' cls='Afx:*' title='*as*' /&gt;" Title="WAT19 as System/Administrator - Project" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
+          </Sequence>
+        </Sequence>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="710,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+    </TryCatch>
+  </Sequence>
+</Activity>

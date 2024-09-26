@@ -1,0 +1,220 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetFilterName_ConfigManager" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_FilterName" Type="InArgument(x:String)" />
+    <x:Property Name="ProjName" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>816,2617</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetFilterName_ConfigManager_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetFilterName_ConfigManager" sap:VirtualizedContainerService.HintSize="826,2552" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <Sequence DisplayName="GetFilterName_ConfigManger" sap:VirtualizedContainerService.HintSize="764,2441" sap2010:WorkflowViewState.IdRef="Sequence_2">
+      <Sequence.Variables>
+        <Variable x:TypeArguments="x:Boolean" Default="False" Name="IsFilterSet" />
+        <Variable x:TypeArguments="ui:GenericValue" Name="ComboValue" />
+      </Sequence.Variables>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: WAT19 as RPAUSER/Administrator - Configuration Manager" sap:VirtualizedContainerService.HintSize="702,2330" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="267552fa-e4a3-4dfb-97ef-8b3fc04baa7f" Version="V2">
+        <uix:NApplicationCard.Body>
+          <ActivityAction x:TypeArguments="x:Object">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="668,1999" sap2010:WorkflowViewState.IdRef="Sequence_3">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <uix:NGetText DisplayName="Get Text 'Filter By'" sap:VirtualizedContainerService.HintSize="606,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="267552fa-e4a3-4dfb-97ef-8b3fc04baa7f" TextString="[ComboValue]" Timeout="5000" Version="V3">
+                <uix:NGetText.Target>
+                  <uix:TargetAnchorable CvTextArea="579, 65, 150, 14" CvType="AnyWordGroup" DesignTimeRectangle="576, 61, 176, 21" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Bot7_Interactive System'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" Guid="d4db92cd-204b-4c55-8b9a-804d9ee87fbc" InformativeScreenshot="cb9685d7edf665ec9d34445a873ca66e.png" ScopeSelectorArgument="&lt;wnd app='cmgr.exe' cls='Afx:*' title='* as * - Configuration *' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                    <uix:TargetAnchorable.Anchors>
+                      <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                        <uix:Target CvTextArea="530, 64, 41, 14" CvTextArgument="Filter By:" CvType="Text" DesignTimeRectangle="531, 64, 42, 13" ElementType="Text" FriendlyName="'Filter By'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' check:text='Filter By:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAARCAYAAACilZ5PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVEhL7ZFRCsMwDENz/9PmBt1aMLypEpSkbG3ZxyOW7Lgibb335Y78g3+bZwRvre0on+cM3D2zbxecWqn+1Afl7uiuZwfXwOvJ2dLOK00/aVe7HZv/Id5DhL47taZWv1h9oj1XO4ZfnD1FZ4j61Kl2nBK8anLUT7vS/eL04G6GpHnqdJcMBXd14fqEs25GPTez+c78JSmocpng6Q8kLvfiR7lp8L68AIaUfmkW+D+tAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, CV" />
+                      </scg:List>
+                    </uix:TargetAnchorable.Anchors>
+                  </uix:TargetAnchorable>
+                </uix:NGetText.Target>
+              </uix:NGetText>
+              <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="606,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Getting Combo box value: &quot;+ ComboValue]" />
+              <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="606,143" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[in_FilterName + &quot; = &quot;+ ComboValue]" />
+              <Sequence sap:VirtualizedContainerService.HintSize="606,1321" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[IsFilterSet=False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="544,1208" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                  <ui:InterruptibleDoWhile.Body>
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="510,1072" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                      <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Filter By'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="468,218" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="267552fa-e4a3-4dfb-97ef-8b3fc04baa7f" Text="[in_FilterName]" Version="V3">
+                        <uix:NTypeInto.Target>
+                          <uix:TargetAnchorable CvTextArea="579, 65, 150, 14" CvTextArgument="Bot7_Interactive System Suitab" CvType="Text" DesignTimeRectangle="576, 61, 176, 21" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Bot7_Interactive System'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" Guid="c77624e0-d7cb-4766-918a-2051706ea4d7" InformativeScreenshot="483e05d517d16769fb76cb3e4f755859.png" ScopeSelectorArgument="&lt;wnd app='cmgr.exe' cls='Afx:*' title='WAT19 as RPAUSER/Administrator - Configuration Manager' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CvTextArea="530, 64, 41, 14" CvTextArgument="Filter By:" CvType="Text" DesignTimeRectangle="531, 64, 42, 13" ElementType="Text" FriendlyName="'Filter By'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' check:text='Filter By:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAARCAYAAACilZ5PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVEhL7ZFRCsMwDENz/9PmBt1aMLypEpSkbG3ZxyOW7Lgibb335Y78g3+bZwRvre0on+cM3D2zbxecWqn+1Afl7uiuZwfXwOvJ2dLOK00/aVe7HZv/Id5DhL47taZWv1h9oj1XO4ZfnD1FZ4j61Kl2nBK8anLUT7vS/eL04G6GpHnqdJcMBXd14fqEs25GPTez+c78JSmocpng6Q8kLvfiR7lp8L68AIaUfmkW+D+tAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NTypeInto.Target>
+                      </uix:NTypeInto>
+                      <uix:NGetText DisplayName="Get Text 'Filter By'" sap:VirtualizedContainerService.HintSize="468,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="267552fa-e4a3-4dfb-97ef-8b3fc04baa7f" TextString="[ComboValue]" Timeout="5000" Version="V3">
+                        <uix:NGetText.Target>
+                          <uix:TargetAnchorable CvTextArea="579, 65, 150, 14" CvType="AnyWordGroup" DesignTimeRectangle="576, 61, 176, 21" DesignTimeScaleFactor="1" ElementType="DropDown" FriendlyName="'Bot7_Interactive System'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd ctrlid='21141' /&gt;" Guid="d4db92cd-204b-4c55-8b9a-804d9ee87fbc" InformativeScreenshot="cb9685d7edf665ec9d34445a873ca66e.png" ScopeSelectorArgument="&lt;wnd app='cmgr.exe' cls='Afx:*' title='* as * - Configuration *' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive" WaitForReadyArgument="Interactive">
+                            <uix:TargetAnchorable.Anchors>
+                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                <uix:Target CvTextArea="530, 64, 41, 14" CvTextArgument="Filter By:" CvType="Text" DesignTimeRectangle="531, 64, 42, 13" ElementType="Text" FriendlyName="'Filter By'" FullSelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='21141' title='View Filter Dialog Bar' /&gt;&lt;wnd cls='Static' title='Filter By:' check:text='Filter By:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAC4AAAARCAYAAACilZ5PAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACpSURBVEhL7ZFRCsMwDENz/9PmBt1aMLypEpSkbG3ZxyOW7Lgibb335Y78g3+bZwRvre0on+cM3D2zbxecWqn+1Afl7uiuZwfXwOvJ2dLOK00/aVe7HZv/Id5DhL47taZWv1h9oj1XO4ZfnD1FZ4j61Kl2nBK8anLUT7vS/eL04G6GpHnqdJcMBXd14fqEs25GPTez+c78JSmocpng6Q8kLvfiR7lp8L68AIaUfmkW+D+tAAAAAElFTkSuQmCC" SearchSteps="Selector, FuzzySelector, CV" />
+                              </scg:List>
+                            </uix:TargetAnchorable.Anchors>
+                          </uix:TargetAnchorable>
+                        </uix:NGetText.Target>
+                      </uix:NGetText>
+                      <ui:LogMessage DisplayName="Log message" sap:VirtualizedContainerService.HintSize="468,143" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[&quot;Filter Changed : &quot; + ComboValue + &quot; Filter Value: &quot; + in_FilterName]" />
+                      <If Condition="[ComboValue = in_FilterName]" sap:VirtualizedContainerService.HintSize="468,346" sap2010:WorkflowViewState.IdRef="If_1">
+                        <If.Then>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[IsFilterSet]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">True</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Then>
+                        <If.Else>
+                          <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:Boolean">[IsFilterSet]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:Boolean">False</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                        </If.Else>
+                      </If>
+                    </Sequence>
+                  </ui:InterruptibleDoWhile.Body>
+                </ui:InterruptibleDoWhile>
+              </Sequence>
+            </Sequence>
+          </ActivityAction>
+        </uix:NApplicationCard.Body>
+        <uix:NApplicationCard.TargetApp>
+          <uix:TargetApp Area="-8, -8, 1376, 744" FilePath="C:\Empower\Bin\cmgr.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACPSURBVFhH7ZBBDsAgCAR5uk/jZzaYSqhaldboZUnmCDNKzBxP4g4gIjetOxlXgBzzTAhhXcAX+bIAOUJybIIsRgACEIAABMzIhSogyVrcghFW3kN9pbw15fIMvbG/owGjpbfJL54d+0MasFu+JOCPXKgCJMGF7CTk2BgEIAABCGjJjwRY+TNgE1auAefgeAE5N1r1pnP0PQAAAABJRU5ErkJggg==" InformativeScreenshot="5a3e86338df20513c80f11813d76b428.png" Selector="&lt;wnd app='cmgr.exe' cls='Afx:*' title='* as * - Configuration *' /&gt;" Title="WAT19 as RPAUSER/Administrator - Configuration Manager" />
+        </uix:NApplicationCard.TargetApp>
+      </uix:NApplicationCard>
+    </Sequence>
+  </Sequence>
+</Activity>

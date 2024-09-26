@@ -1,0 +1,180 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="GetSampleSetId" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="SampleSetId" Type="InArgument(x:String)" />
+  </x:Members>
+  <this:GetSampleSetId.SampleSetId>
+    <InArgument x:TypeArguments="x:String" />
+  </this:GetSampleSetId.SampleSetId>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>1239.3333333333333,1673.3333333333333</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>GetSampleSetId_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Runtime.InteropServices</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="GetSampleSetId" sap:VirtualizedContainerService.HintSize="546,1608.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: !dfsf in MILLENNIUM on WAT19 as System/Administrator - View Filter Editor" sap:VirtualizedContainerService.HintSize="484,1498" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="7ca8fc38-f229-42cc-9eeb-9aa677530612" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,1200.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,92" sap2010:WorkflowViewState.IdRef="Delay_1" />
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'project.exe !glen_newfi…'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_5" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ca8fc38-f229-42cc-9eeb-9aa677530612" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="659, 151, 65, 11" DesignTimeScaleFactor="1.5" FriendlyName="'project.exe !glen_newfi…'" Guid="8e1a44d1-f055-46c6-940c-37bf24dfacae" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEEAAAALCAYAAAAgNOBPAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAAvSURBVEhL7dABDQAADIOw+Vc1Zzs+ThMMkGlOgBPgBDgBToAT4AQ4AU5A2u533QG4RfFu74sKvAAAAABJRU5ErkJggg==" InformativeScreenshot="d89909ce567b07e25276800b7d9df162.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='!glen_newfilter in MILLENNIUM on WAT19 as System/Administrator -*' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="664, 95, 70, 38" FriendlyName="'project.exe !glen_newfi…'" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAEYAAAAmCAYAAAB52u3eAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAH8SURBVGhD7ZjRrcMgDEU7VeZhmwzDEpmAWfKXTx4GTAyxk6JUpH1ypaOmBoy5NgT1ta6rVxLLskS2bfMqDEGFEVBhBCphwscby3e8jZv9NM3ecW0c1kBAheu4rDecf3Ze5+fp3GddMeDkNfnZ8Z1v0SNMjMN4W/2+iEvyz9p7hWka3TztWTM22eNEJmQn2afZxknSszu01+NygLQasJ0iLRI5jE8Ljb/bccRXWU+O721hSoaAKrhQpphBsGP22mfoT200M7SdBG8NHyDY0+JJ5QDS+MZ+6A/f1Ro6hDFtINlBCrARANvbZ2oLQJb2Sgr25uwAYnvufwSSAv1yXNL4Zt5CtluMI9ulhCCVMGAoC4kBoEgQ3AeF4bbPBVVcPdsv228KQ0qfBhBF6hDmaitx7TmgfT66hRo/Z/6pH6CalyaamZdQCVPKMjZiCQdMOKzQEQ2Ae47fNw/fQDkoMzTb/PgcL86BkHl3n6F6uIQQmorhO3VBBfhhVBiBzwvzT1BhBFQYARVGYLgw5aJW2cOr9ssO7LHCwBtLuLfA3eQo2HMMFcYavLFywC2W3nafZaAwcDM9Xzhss7Pb6EjGCfPGxY8/f55BhREYJ8wbW+nqr4CRDBRGD18ZfV3L6AXvx1FhBFQYARVGQIURUGEEVBgBFUZAhRFQYQR2YTb/B0OCkyMRKRECAAAAAElFTkSuQmCC" SearchSteps="Image" TargetType="ImageBased" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <ui:SetValue AlterIfDisabled="{x:Null}" ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" DisplayName="Set Text 'Edit'" sap:VirtualizedContainerService.HintSize="388,157.33333333333334" sap2010:WorkflowViewState.IdRef="SetValue_1" Text="[&quot;=&quot;+SampleSetId]">
+              <ui:SetValue.Target>
+                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="c028b427-2888-403f-95ae-bbc1a038add1" InformativeScreenshot="d125734b245b558e3ecaf523cd35f19d" Selector="&lt;wnd ctrlid='527' /&gt;">
+                  <ui:Target.TimeoutMS>
+                    <InArgument x:TypeArguments="x:Int32" />
+                  </ui:Target.TimeoutMS>
+                  <ui:Target.WaitForReady>
+                    <InArgument x:TypeArguments="ui:WaitForReady" />
+                  </ui:Target.WaitForReady>
+                </ui:Target>
+              </ui:SetValue.Target>
+            </ui:SetValue>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ca8fc38-f229-42cc-9eeb-9aa677530612" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="233, 56, 23, 22" DesignTimeScaleFactor="1" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;wnd cls='ToolbarWindow32' title='View Filter Editor Toolbar' /&gt;&lt;ctrl name='View Filter Editor Toolbar' role='tool bar' /&gt;&lt;ctrl name='Save' role='push button' /&gt;" FuzzySelectorArgument="&lt;wnd cls='ToolbarWindow32' title='View Filter Editor Toolbar' /&gt;&lt;ctrl name='View Filter Editor Toolbar' role='tool bar' /&gt;&lt;ctrl name='Save' role='push button' automationid='' check:text='Save' /&gt;" Guid="94a15c43-979b-4933-8c0f-7ead2721a224" InformativeScreenshot="ac004c77ca6e25352058c5844a1105fa.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='!dfsf in MILLENNIUM on WAT19 as System/Administrator - View Filt*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="8, 31, 1360, 19" ElementType="Toolbar" FriendlyName="'Application'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' check:text='Application' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Edit'" sap:VirtualizedContainerService.HintSize="388,159.33333333333334" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ca8fc38-f229-42cc-9eeb-9aa677530612" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="8, 31, 32, 19" DesignTimeScaleFactor="1" FriendlyName="'File'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' /&gt;&lt;ctrl name='File' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' /&gt;&lt;ctrl name='File' role='menu item' automationid='' check:text='File' /&gt;" Guid="e9e4894f-4093-47be-aa28-2e4e355d2319" InformativeScreenshot="67b5ed162b1b07ff96f5d7d68936c556.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='!dfsf in MILLENNIUM on WAT19 as System/Administrator - View Filt*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="40, 31, 34, 19" FriendlyName="'Edit'" FullSelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' /&gt;&lt;ctrl name='Edit' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='MenuBar' name='Application' role='menu bar' /&gt;&lt;ctrl name='Edit' role='menu item' automationid='' check:text='Edit' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View Filter Wizard'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="7ca8fc38-f229-42cc-9eeb-9aa677530612" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 171, 213, 22" DesignTimeScaleFactor="1" FriendlyName="'Exit'" FullSelectorArgument="&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='16399' /&gt;" FuzzySelectorArgument="&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='16399' role='menu item' check:text='Exit' /&gt;" Guid="a98bbcc6-b2ef-440a-ac91-9999450f1315" InformativeScreenshot="06a8d115a6984b84d2796110358cefe9.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                      <uix:Target DesignTimeRectangle="3, 120, 213, 22" FriendlyName="'View Filter Wizard'" FullSelectorArgument="&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='16462' /&gt;" FuzzySelectorArgument="&lt;ctrl name='File' role='popup menu' /&gt;&lt;ctrl automationid='16462' role='menu item' check:text='View Filter Wizard' /&gt;" SearchSteps="Selector, FuzzySelector" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1376, 744" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVFhH7ZKBbsMwCETz/1+VP8vuCChgg+u1rqxJQ3on4QB36nac53nt5G8GOI6rI5ubYTpAZlqR7Ve8DNAZXAMgnuxeyzBAOJgZVkCM7K6nDPCWcQvkVYg0QGXuq/1WAhmF6AKMzA98MKSfBUJaL/ELjQ4Kumx1mz5YiFGFDQjxfuIZGh2SBWDVmhv2a5T4aQjxfuIZGh2SBcDioedlnl8HsAEZVljLAhAI2ReAQP4D7AsAIWkAaTjgFlirA3g/8QwNBnwI1rIAEOL9xDM0OiQLgLUnAMESSw69C/cN3gTeTzy7Bx2UpVVAMnPx6x50eFkISGVOugDyqEsfh4Dc3H+S1Ct7JM+ykhlUQB7i/0Xn0z603EccmaEBiURzI9z3zQjsTRP3xiGmA3iw35HNGVkAIt/a4W+xPQDZHoBsDxA5rx8O21t/o+7/kQAAAABJRU5ErkJggg==" InformativeScreenshot="20e7bbb30e39b155954ff6f95fc98407.png" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='!dfsf in MILLENNIUM on WAT19 as System/Administrator - View Filt*' /&gt;" Title="!dfsf in MILLENNIUM on WAT19 as System/Administrator - View Filt*" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

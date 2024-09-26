@@ -1,0 +1,296 @@
+<Activity mc:Ignorable="sads sap sap2010" x:Class="filter" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sads="http://schemas.microsoft.com/netfx/2010/xaml/activities/debugger" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ColumnName" Type="InArgument(s:String[])" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>filter_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Plugin.Workflow</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <sap2010:WorkflowViewState.ViewStateManager>
+    <sap2010:ViewStateManager>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,60" Id="Assign_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,60" Id="Assign_2" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,134" Id="SelectItem_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,106" Id="Click_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="336,604" Id="Sequence_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="414,750" Id="WindowScope_1">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="314,106" Id="GetVisibleText_3" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="336,230" Id="Sequence_21">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="414,376" Id="WindowScope_5">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="436,1290" Id="Sequence_17">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="464,1452" Id="DoWhile_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="486,1576" Id="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="508,1700" Id="Sequence_16">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="524,1834" Id="ForEach`1_1" />
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="546,1958" Id="Sequence_3">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </sap2010:ViewStateData>
+      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="586,2038" Id="filter_1" />
+    </sap2010:ViewStateManager>
+  </sap2010:WorkflowViewState.ViewStateManager>
+  <Sequence DisplayName="filter" sap2010:WorkflowViewState.IdRef="Sequence_3" sads:DebugSymbol.Symbol="d31DOlxVc2Vyc1xhcHB1c2VyXC5udWdldFxwYWNrYWdlc1xSUEFDRF9Qcm9jZXNzZXNcMS4wLjc3MzAuMTg4MTZcbGliXG5ldDQ1XFJQQUNEX1Jldmlld1xGcmFtZXdvcmtcbXVsdGlwbGVfZmlsdGVyQ3JlYXRpb24ueGFtbCBIA9oBDgIBAUkF2AESAgECSZABSaEBAgEoTwvVARYCAQNQDdQBGAIBBFcP0wEZAgEFWyRbRQIBJ1wR0gEcAgEGXRO+ASQCAQ+/ARPRASQCAQddogJd/QICASZjGbsBJAIBEL8BogK/AYMDAgEOxQEZzgEkAgEIaBtvJAIBIXAbdyQCARx4G7IBKwIBF7MBG7oBJgIBEcYBG80BLwIBCW1GbZgBAgEkakdqXAIBInVGdZkBAgEfckdyVwIBHXjHAXjPAQIBGLABrgGwAcUBAgEauAGuAbgBwAECARW1AUe1AUoCARS1ATq1AT4CAROzAV2zAWMCARLGAcEBxgHEAQIBDcgBrgHIAcwBAgEMywFOywFaAgEK">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ColumnName]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:String" Name="name" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_16">
+            <Sequence DisplayName="Desktop" sap2010:WorkflowViewState.IdRef="Sequence_2">
+              <Sequence.Variables>
+                <Variable x:TypeArguments="ui:GenericValue" Name="List" />
+                <Variable x:TypeArguments="ui:GenericValue" Name="List1" />
+                <Variable x:TypeArguments="x:String" Name="columnName" />
+                <Variable x:TypeArguments="ui:GenericValue" Name="CopyText" />
+              </Sequence.Variables>
+              <DoWhile DisplayName="Do While" sap2010:WorkflowViewState.IdRef="DoWhile_1">
+                <DoWhile.Variables>
+                  <Variable x:TypeArguments="ui:GenericValue" Name="tablevieww" />
+                </DoWhile.Variables>
+                <DoWhile.Condition>[tablevieww.Contains(name)=False]</DoWhile.Condition>
+                <Sequence sap2010:WorkflowViewState.IdRef="Sequence_17">
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Untitledi Afxframeo'" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="83b6f94348a341de9638580041e5d06c" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='Untitled in*as* - View Fil*' /&gt;">
+                    <ui:WindowScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                          <Sequence.Variables>
+                            <Variable x:TypeArguments="x:String" Name="SelectItem_Selector" />
+                            <Variable x:TypeArguments="x:String" Name="Click_Selector" />
+                          </Sequence.Variables>
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_1">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[SelectItem_Selector]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='" + name +"' role='list item' /&gt;"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <Assign sap2010:WorkflowViewState.IdRef="Assign_2">
+                            <Assign.To>
+                              <OutArgument x:TypeArguments="x:String">[Click_Selector]</OutArgument>
+                            </Assign.To>
+                            <Assign.Value>
+                              <InArgument x:TypeArguments="x:String">["&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='" + name + "' role='list item' /&gt;"]</InArgument>
+                            </Assign.Value>
+                          </Assign>
+                          <ui:SelectItem ContinueOnError="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" AlterIfDisabled="True" DisplayName="Select Item 'list'" sap2010:WorkflowViewState.IdRef="SelectItem_1" Item="[name]">
+                            <ui:SelectItem.Items>
+                              <scg:List x:TypeArguments="x:String" Capacity="50">
+                                <x:String># of Process Only Sample Sets</x:String>
+                                <x:String>Acq Method Set</x:String>
+                                <x:String>Acquired By</x:String>
+                                <x:String>Altered</x:String>
+                                <x:String>ARNo</x:String>
+                                <x:String>Auto Additions</x:String>
+                                <x:String>Average_Shellweight</x:String>
+                                <x:String>Average_ShellWt</x:String>
+                                <x:String>Average_Weight</x:String>
+                                <x:String>Avg_Wt</x:String>
+                                <x:String>Barcode / BCD</x:String>
+                                <x:String>Batch_Number</x:String>
+                                <x:String>Bath</x:String>
+                                <x:String>Blank</x:String>
+                                <x:String>Calculated_Assay</x:String>
+                                <x:String>Column Name</x:String>
+                                <x:String>Column Serial Number</x:String>
+                                <x:String>Comments</x:String>
+                                <x:String>D1</x:String>
+                                <x:String>D2</x:String>
+                                <x:String>D3</x:String>
+                                <x:String>D4</x:String>
+                                <x:String>D5</x:String>
+                                <x:String>D6</x:String>
+                                <x:String>D7</x:String>
+                                <x:String>Date Acquired</x:String>
+                                <x:String>Dilution</x:String>
+                                <x:String>eCord Injection Count (Lifetime to Date)</x:String>
+                                <x:String>eCord Maximum Pressure (Lifetime to Date)</x:String>
+                                <x:String>eCord Maximum Temperature (Lifetime to Date)</x:String>
+                                <x:String>eCord Name</x:String>
+                                <x:String>eCord Sample Count (Lifetime to Date)</x:String>
+                                <x:String>eCord Serial Number</x:String>
+                                <x:String>Equivalent_Factor</x:String>
+                                <x:String>Factor_Den</x:String>
+                                <x:String>Factor_Denominator</x:String>
+                                <x:String>Factor_Num</x:String>
+                                <x:String>Factor_Numerator</x:String>
+                                <x:String>Flowrate</x:String>
+                                <x:String>Hydrate_Content</x:String>
+                                <x:String>Injection</x:String>
+                                <x:String>Injection Id</x:String>
+                                <x:String>Injection Volume</x:String>
+                                <x:String>Instrument Method Id</x:String>
+                                <x:String>Instrument Method Name</x:String>
+                                <x:String>Label</x:String>
+                                <x:String>Level</x:String>
+                                <x:String>LimsSampleId</x:String>
+                                <x:String>LimsTestId</x:String>
+                                <x:String>Mediavolume</x:String>
+                              </scg:List>
+                            </ui:SelectItem.Items>
+                            <ui:SelectItem.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="03e82848-015a-49e3-959a-f5cb2535f8b2" InformativeScreenshot="2af7f7619dfb786f78fd94df200e41e0" Selector="[SelectItem_Selector]" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:SelectItem.Target>
+                          </ui:SelectItem>
+                          <ui:Click DelayMS="{x:Null}" AlterIfDisabled="True" ClickType="CLICK_DOUBLE" DelayBefore="1000" DisplayName="Click 'list item  Bath'" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                            <ui:Click.CursorPosition>
+                              <ui:CursorPosition OffsetX="39" OffsetY="8" Position="TopLeft" />
+                            </ui:Click.CursorPosition>
+                            <ui:Click.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="32c872bf-3d69-4fdb-a5b0-3c7da856a388" InformativeScreenshot="63626fd161528fefc15ac0b4d0765e11" Selector="[Click_Selector]" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:Click.Target>
+                          </ui:Click>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:WindowScope.Body>
+                  </ui:WindowScope>
+                  <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'Untitledi Afxframeo'" sap2010:WorkflowViewState.IdRef="WindowScope_5" InformativeScreenshot="71df91fb97347a9877b357bc5671a6cb" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='Untitled in * on*as * - View Fil*' /&gt;">
+                    <ui:WindowScope.Body>
+                      <ActivityAction x:TypeArguments="x:Object">
+                        <ActivityAction.Argument>
+                          <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                        </ActivityAction.Argument>
+                        <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_21">
+                          <ui:GetVisibleText WordsInfo="{x:Null}" DisplayName="Get Visible Text 'TableView'" FormattedText="True" sap2010:WorkflowViewState.IdRef="GetVisibleText_3" Separators=" ">
+                            <ui:GetVisibleText.Target>
+                              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="34c0b165-d7ae-41ff-aca7-cd599fc12a5f" InformativeScreenshot="aaf4a3b6e5236222afcd3f5d0e09d850" Selector="&lt;wnd ctrlid='16325' /&gt;" WaitForReady="INTERACTIVE">
+                                <ui:Target.TimeoutMS>
+                                  <InArgument x:TypeArguments="x:Int32" />
+                                </ui:Target.TimeoutMS>
+                              </ui:Target>
+                            </ui:GetVisibleText.Target>
+                            <ui:GetVisibleText.Text>
+                              <OutArgument x:TypeArguments="ui:GenericValue">[tablevieww]</OutArgument>
+                            </ui:GetVisibleText.Text>
+                          </ui:GetVisibleText>
+                        </Sequence>
+                      </ActivityAction>
+                    </ui:WindowScope.Body>
+                  </ui:WindowScope>
+                </Sequence>
+              </DoWhile>
+            </Sequence>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+  </Sequence>
+</Activity>

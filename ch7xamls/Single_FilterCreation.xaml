@@ -1,0 +1,502 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Single_FilterCreation" this:Single_FilterCreation.in_ColumnName="[{&quot;Method_Details&quot;,&quot;Processing Method Id&quot;,&quot;Sample Set Id&quot;}]" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="in_ColumnName" Type="InArgument(s:String[])" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap:VirtualizedContainerService.HintSize>938,2784</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>Single_FilterCreation_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+      <x:String>UiPath.Core.Activities.SAP</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.DataTableUtilities</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.ViewModels</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Single_FilterCreation" sap:VirtualizedContainerService.HintSize="746,2719" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="ui:GenericValue" Name="TableView_MD" />
+      <Variable x:TypeArguments="x:String" Name="StrColumnName" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="684,52" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="806,2465" sap2010:WorkflowViewState.IdRef="Sequence_11">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:ForEach x:TypeArguments="x:Object" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="744,2354" sap2010:WorkflowViewState.IdRef="ForEach`1_1" Values="[in_ColumnName]">
+            <ui:ForEach.Body>
+              <ActivityAction x:TypeArguments="x:Object">
+                <ActivityAction.Argument>
+                  <DelegateInArgument x:TypeArguments="x:Object" Name="columnitem" />
+                </ActivityAction.Argument>
+                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="710,2168" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[TableView_MD.Contains(in_ColumnName)=False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="668,2080" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_1">
+                    <ui:InterruptibleDoWhile.Body>
+                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="634,1944" sap2010:WorkflowViewState.IdRef="Sequence_2">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <Sequence sap:VirtualizedContainerService.HintSize="592,1856" sap2010:WorkflowViewState.IdRef="Sequence_3">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Untitled in Interactive System Suitability on WAT19 as RPAUSER/Administrator - View" sap:VirtualizedContainerService.HintSize="530,1142" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" ScopeGuid="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,851" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_1">
+                                    <Assign.To>
+                                      <OutArgument x:TypeArguments="x:String">[str_columnName]</OutArgument>
+                                    </Assign.To>
+                                    <Assign.Value>
+                                      <InArgument x:TypeArguments="x:String">[columnitem]</InArgument>
+                                    </Assign.Value>
+                                  </Assign>
+                                  <uix:NSelectItem DisplayName="Select Item 'Field Names'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NSelectItem_4" Item="[columnitem]" ScopeIdentifier="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V3">
+                                    <uix:NSelectItem.Items>
+                                      <scg:List x:TypeArguments="x:String" Capacity="50">
+                                        <x:String># of Process Only Sample Sets</x:String>
+                                        <x:String># of Results Stored</x:String>
+                                        <x:String>Acq Method Set</x:String>
+                                        <x:String>Acquired By</x:String>
+                                        <x:String>Adjusted Total Area</x:String>
+                                        <x:String>Altered</x:String>
+                                        <x:String>ARNo</x:String>
+                                        <x:String>Average Detector Drift</x:String>
+                                        <x:String>Average Detector Noise</x:String>
+                                        <x:String>Average Peak to Peak Noise</x:String>
+                                        <x:String>Barcode / BCD</x:String>
+                                        <x:String>Baseline Drift</x:String>
+                                        <x:String>Baseline Noise</x:String>
+                                        <x:String>Blank</x:String>
+                                        <x:String>Calibration Id</x:String>
+                                        <x:String>Channel</x:String>
+                                        <x:String>Channel Description</x:String>
+                                        <x:String>Channel Id</x:String>
+                                        <x:String>Channel Name</x:String>
+                                        <x:String>Channel Status</x:String>
+                                        <x:String>Channel Type</x:String>
+                                        <x:String>Column Name</x:String>
+                                        <x:String>Column Serial Number</x:String>
+                                        <x:String>Comments</x:String>
+                                        <x:String>Data End</x:String>
+                                        <x:String>Data Start</x:String>
+                                        <x:String>Date Acquired</x:String>
+                                        <x:String>Date Processed</x:String>
+                                        <x:String>Derived Channel Formula</x:String>
+                                        <x:String>Derived Channel Ids</x:String>
+                                        <x:String>Det. Units</x:String>
+                                        <x:String>Detector Drift</x:String>
+                                        <x:String>Detector Noise</x:String>
+                                        <x:String>Dilution</x:String>
+                                        <x:String>eCord Injection Count (Lifetime to Date)</x:String>
+                                        <x:String>eCord Maximum Pressure (Lifetime to Date)</x:String>
+                                        <x:String>eCord Maximum Temperature (Lifetime to Date)</x:String>
+                                        <x:String>eCord Name</x:String>
+                                        <x:String>eCord Sample Count (Lifetime to Date)</x:String>
+                                        <x:String>eCord Serial Number</x:String>
+                                        <x:String>Faults</x:String>
+                                        <x:String>Impurity Response Field</x:String>
+                                        <x:String>Impurity Status</x:String>
+                                        <x:String>Injection</x:String>
+                                        <x:String>Injection Id</x:String>
+                                        <x:String>Injection Status</x:String>
+                                        <x:String>Injection Volume</x:String>
+                                        <x:String>Injection Volume (Result)</x:String>
+                                        <x:String>Instrument Method Id</x:String>
+                                        <x:String>Instrument Method Name</x:String>
+                                      </scg:List>
+                                    </uix:NSelectItem.Items>
+                                    <uix:NSelectItem.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="10, 406, 1356, 303" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'ListBox'" FullSelectorArgument="[string.Format(&quot;&lt;wnd ctrlid='16324' cls='ListBox' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, in_ColumnName)]" FuzzySelectorArgument="&lt;wnd ctrlid='16324' /&gt;" Guid="37a46bf9-6e8b-4ff4-983a-ac25e34282b5" InformativeScreenshot="53ab145e420c1524bbf1135594e62d3c.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='* on * as *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CvTextArea="640, 393, 60, 12" CvTextArgument="Field Names" CvType="Text" DesignTimeRectangle="641, 393, 93, 13" ElementType="Text" FriendlyName="'Field Names'" FullSelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' check:text='Field Names' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAARCAYAAADNJMJiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7ZjBCoNADETz7b302n/0B/yDLR4C4zhZtT0ktFl4rPtmtNBQhNqyLKPJxUav9GXruo4mlx5CAXZDMLMD7rHHRLnyV90/cRgCnq9ydwjsP/3cX6GHUIBLQ0DvXyI7laPHHHe+9rMTOc5Vhz26SkzfCehxj3yUK4eZ6jlnfZVHnjtVuPVL2HaGc79HndnN7kO4o669i6h+RW4PgTP0nKu+6qCLnhF1VK44yzP5agjso3zmtjO66BlRR+WR504V0l7MM4f3e4ad2bXjDj26SuyG0OTQQyiAPZ6v0eTSf2WnrzHe9v12Bg8g1UoAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, CV" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NSelectItem.Target>
+                                  </uix:NSelectItem>
+                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_1" />
+                                  <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Field Names'" sap:VirtualizedContainerService.HintSize="434,157" sap2010:WorkflowViewState.IdRef="NClick_3" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V3">
+                                    <uix:NClick.Target>
+                                      <uix:TargetAnchorable CvTextArea="623, 642, 77, 13" CvTextArgument="Method_Details" CvType="Text" DesignTimeRectangle="624, 642, 306, 13" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Method_Details'" FullSelectorArgument="[string.Format(&quot;&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, in_ColumnName)]" FuzzySelectorArgument="&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='Method_Details' role='list item' automationid='' check:text='Method_Details' /&gt;" Guid="919e74b4-e2aa-41e6-8ca9-0759b28184b0" InformativeScreenshot="3f56c32092880437496fd484484ac684.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                                        <uix:TargetAnchorable.Anchors>
+                                          <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                            <uix:Target CvTextArea="640, 393, 60, 12" CvTextArgument="Field Names" CvType="Text" DesignTimeRectangle="641, 393, 93, 13" ElementType="Text" FriendlyName="'Field Names'" FullSelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' check:text='Field Names' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAARCAYAAADNJMJiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7ZjBCoNADETz7b302n/0B/yDLR4C4zhZtT0ktFl4rPtmtNBQhNqyLKPJxUav9GXruo4mlx5CAXZDMLMD7rHHRLnyV90/cRgCnq9ydwjsP/3cX6GHUIBLQ0DvXyI7laPHHHe+9rMTOc5Vhz26SkzfCehxj3yUK4eZ6jlnfZVHnjtVuPVL2HaGc79HndnN7kO4o669i6h+RW4PgTP0nKu+6qCLnhF1VK44yzP5agjso3zmtjO66BlRR+WR504V0l7MM4f3e4ad2bXjDj26SuyG0OTQQyiAPZ6v0eTSf2WnrzHe9v12Bg8g1UoAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                                          </scg:List>
+                                        </uix:TargetAnchorable.Anchors>
+                                      </uix:TargetAnchorable>
+                                    </uix:NClick.Target>
+                                  </uix:NClick>
+                                  <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="434,90" sap2010:WorkflowViewState.IdRef="Delay_2" />
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="-8, -8, 1376, 744" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVFhH7ZKBbsMwCETz/1+VP8vuCChgg+u1rqxJQ3on4QB36nac53nt5G8GOI6rI5ubYTpAZlqR7Ve8DNAZXAMgnuxeyzBAOJgZVkCM7K6nDPCWcQvkVYg0QGXuq/1WAhmF6AKMzA98MKSfBUJaL/ELjQ4Kumx1mz5YiFGFDQjxfuIZGh2SBWDVmhv2a5T4aQjxfuIZGh2SBcDioedlnl8HsAEZVljLAhAI2ReAQP4D7AsAIWkAaTjgFlirA3g/8QwNBnwI1rIAEOL9xDM0OiQLgLUnAMESSw69C/cN3gTeTzy7Bx2UpVVAMnPx6x50eFkISGVOugDyqEsfh4Dc3H+S1Ct7JM+ykhlUQB7i/0Xn0z603EccmaEBiURzI9z3zQjsTRP3xiGmA3iw35HNGVkAIt/a4W+xPQDZHoBsDxA5rx8O21t/o+7/kQAAAABJRU5ErkJggg==" InformativeScreenshot="db2546d636b8bbbee28cb9e672b589e9.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='*on * as *' /&gt;" Title="Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                          <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Untitled in Interactive System Suitability on WAT19 as RPAUSER/Administrator - View" sap:VirtualizedContainerService.HintSize="530,563" sap2010:WorkflowViewState.IdRef="NApplicationCard_2" ScopeGuid="51311df6-d3cc-4d51-8ac3-a6d93fdbef69" Version="V2">
+                            <uix:NApplicationCard.Body>
+                              <ActivityAction x:TypeArguments="x:Object">
+                                <ActivityAction.Argument>
+                                  <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                </ActivityAction.Argument>
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,272" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                                  <sap:WorkflowViewStateService.ViewState>
+                                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                    </scg:Dictionary>
+                                  </sap:WorkflowViewStateService.ViewState>
+                                  <uix:NGetText DisplayName="Get Text 'client'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="51311df6-d3cc-4d51-8ac3-a6d93fdbef69" TextString="[TableView_MD]" Version="V3">
+                                    <uix:NGetText.Target>
+                                      <uix:TargetAnchorable DesignTimeRectangle="12, 85, 816, 137" DesignTimeScaleFactor="1" FriendlyName="'client'" FullSelectorArgument="&lt;wnd ctrlid='16325' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16325' /&gt;&lt;ctrl role='client' automationid='' /&gt;" Guid="524f6110-60e0-4bfa-a8e0-85204efe6794" ImageBase64="" InformativeScreenshot="6134d1c62c481636e60fccc63a3a12c0.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                                    </uix:NGetText.Target>
+                                  </uix:NGetText>
+                                </Sequence>
+                              </ActivityAction>
+                            </uix:NApplicationCard.Body>
+                            <uix:NApplicationCard.TargetApp>
+                              <uix:TargetApp Area="0, 0, 840, 440" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVFhH7ZKBbsMwCETz/1+VP8vuCChgg+u1rqxJQ3on4QB36nac53nt5G8GOI6rI5ubYTpAZlqR7Ve8DNAZXAMgnuxeyzBAOJgZVkCM7K6nDPCWcQvkVYg0QGXuq/1WAhmF6AKMzA98MKSfBUJaL/ELjQ4Kumx1mz5YiFGFDQjxfuIZGh2SBWDVmhv2a5T4aQjxfuIZGh2SBcDioedlnl8HsAEZVljLAhAI2ReAQP4D7AsAIWkAaTjgFlirA3g/8QwNBnwI1rIAEOL9xDM0OiQLgLUnAMESSw69C/cN3gTeTzy7Bx2UpVVAMnPx6x50eFkISGVOugDyqEsfh4Dc3H+S1Ct7JM+ykhlUQB7i/0Xn0z603EccmaEBiURzI9z3zQjsTRP3xiGmA3iw35HNGVkAIt/a4W+xPQDZHoBsDxA5rx8O21t/o+7/kQAAAABJRU5ErkJggg==" InformativeScreenshot="742bfb84d752425792dd62dcf94b35ae.png" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView140' title='*on *as*' /&gt;" Title="Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*" />
+                            </uix:NApplicationCard.TargetApp>
+                          </uix:NApplicationCard>
+                        </Sequence>
+                      </Sequence>
+                    </ui:InterruptibleDoWhile.Body>
+                  </ui:InterruptibleDoWhile>
+                </Sequence>
+              </ActivityAction>
+            </ui:ForEach.Body>
+          </ui:ForEach>
+        </Sequence>
+      </ui:CommentOut.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </ui:CommentOut>
+    <Sequence DisplayName="FilterCreation" sap:VirtualizedContainerService.HintSize="684,2516" sap2010:WorkflowViewState.IdRef="Sequence_15">
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <ui:ForEach x:TypeArguments="x:String" CurrentIndex="{x:Null}" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="622,2405" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[In_ColumnName]">
+        <ui:ForEach.Body>
+          <ActivityAction x:TypeArguments="x:String">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="x:String" Name="ColumnItem" />
+            </ActivityAction.Argument>
+            <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="588,2219" sap2010:WorkflowViewState.IdRef="Sequence_9">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Sequence sap:VirtualizedContainerService.HintSize="546,2039" sap2010:WorkflowViewState.IdRef="Sequence_10">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <Assign sap:VirtualizedContainerService.HintSize="484,82" sap2010:WorkflowViewState.IdRef="Assign_2">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[StrColumnName]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[ColumnItem]</InArgument>
+                  </Assign.Value>
+                </Assign>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Untitled in Interactive System Suitability on WAT19 as RPAUSER/Administrator - View" sap:VirtualizedContainerService.HintSize="484,1020" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" ScopeGuid="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,729" sap2010:WorkflowViewState.IdRef="Sequence_16">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NSelectItem DisplayName="Select Item 'Field Names'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="[StrColumnName]" ScopeIdentifier="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V3">
+                          <uix:NSelectItem.Items>
+                            <scg:List x:TypeArguments="x:String" Capacity="50">
+                              <x:String># of Process Only Sample Sets</x:String>
+                              <x:String># of Results Stored</x:String>
+                              <x:String>Acq Method Set</x:String>
+                              <x:String>Acquired By</x:String>
+                              <x:String>Adjusted Total Area</x:String>
+                              <x:String>Altered</x:String>
+                              <x:String>ARNo</x:String>
+                              <x:String>Average Detector Drift</x:String>
+                              <x:String>Average Detector Noise</x:String>
+                              <x:String>Average Peak to Peak Noise</x:String>
+                              <x:String>Barcode / BCD</x:String>
+                              <x:String>Baseline Drift</x:String>
+                              <x:String>Baseline Noise</x:String>
+                              <x:String>Blank</x:String>
+                              <x:String>Calibration Id</x:String>
+                              <x:String>Channel</x:String>
+                              <x:String>Channel Description</x:String>
+                              <x:String>Channel Id</x:String>
+                              <x:String>Channel Name</x:String>
+                              <x:String>Channel Status</x:String>
+                              <x:String>Channel Type</x:String>
+                              <x:String>Column Name</x:String>
+                              <x:String>Column Serial Number</x:String>
+                              <x:String>Comments</x:String>
+                              <x:String>Data End</x:String>
+                              <x:String>Data Start</x:String>
+                              <x:String>Date Acquired</x:String>
+                              <x:String>Date Processed</x:String>
+                              <x:String>Derived Channel Formula</x:String>
+                              <x:String>Derived Channel Ids</x:String>
+                              <x:String>Det. Units</x:String>
+                              <x:String>Detector Drift</x:String>
+                              <x:String>Detector Noise</x:String>
+                              <x:String>Dilution</x:String>
+                              <x:String>eCord Injection Count (Lifetime to Date)</x:String>
+                              <x:String>eCord Maximum Pressure (Lifetime to Date)</x:String>
+                              <x:String>eCord Maximum Temperature (Lifetime to Date)</x:String>
+                              <x:String>eCord Name</x:String>
+                              <x:String>eCord Sample Count (Lifetime to Date)</x:String>
+                              <x:String>eCord Serial Number</x:String>
+                              <x:String>Faults</x:String>
+                              <x:String>Impurity Response Field</x:String>
+                              <x:String>Impurity Status</x:String>
+                              <x:String>Injection</x:String>
+                              <x:String>Injection Id</x:String>
+                              <x:String>Injection Status</x:String>
+                              <x:String>Injection Volume</x:String>
+                              <x:String>Injection Volume (Result)</x:String>
+                              <x:String>Instrument Method Id</x:String>
+                              <x:String>Instrument Method Name</x:String>
+                            </scg:List>
+                          </uix:NSelectItem.Items>
+                          <uix:NSelectItem.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="10, 406, 1356, 303" DesignTimeScaleFactor="1" ElementType="List" FriendlyName="'ListBox'" FullSelectorArgument="[string.Format(&quot;&lt;wnd ctrlid='16324' cls='ListBox' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, StrColumnName)]" FuzzySelectorArgument="&lt;wnd ctrlid='16324' /&gt;" Guid="37a46bf9-6e8b-4ff4-983a-ac25e34282b5" InformativeScreenshot="53ab145e420c1524bbf1135594e62d3c.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='* on * as *' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="640, 393, 60, 12" CvTextArgument="Field Names" CvType="Text" DesignTimeRectangle="641, 393, 93, 13" ElementType="Text" FriendlyName="'Field Names'" FullSelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' check:text='Field Names' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAARCAYAAADNJMJiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7ZjBCoNADETz7b302n/0B/yDLR4C4zhZtT0ktFl4rPtmtNBQhNqyLKPJxUav9GXruo4mlx5CAXZDMLMD7rHHRLnyV90/cRgCnq9ydwjsP/3cX6GHUIBLQ0DvXyI7laPHHHe+9rMTOc5Vhz26SkzfCehxj3yUK4eZ6jlnfZVHnjtVuPVL2HaGc79HndnN7kO4o669i6h+RW4PgTP0nKu+6qCLnhF1VK44yzP5agjso3zmtjO66BlRR+WR504V0l7MM4f3e4ad2bXjDj26SuyG0OTQQyiAPZ6v0eTSf2WnrzHe9v12Bg8g1UoAAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, CV" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NSelectItem.Target>
+                        </uix:NSelectItem>
+                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_6" />
+                        <uix:NClick ActivateBefore="True" ClickType="Double" DisplayName="Click 'Field Names'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_5" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fb69df6-42ef-468c-86fd-7588d65003b5" Version="V3">
+                          <uix:NClick.Target>
+                            <uix:TargetAnchorable CvTextArea="623, 642, 77, 13" CvTextArgument="Method_Details" CvType="Text" DesignTimeRectangle="624, 642, 306, 13" DesignTimeScaleFactor="1" ElementType="ListItem" FriendlyName="'Method_Details'" FullSelectorArgument="[string.Format(&quot;&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='{0}' role='list item' /&gt;&quot;, StrColumnName)]" FuzzySelectorArgument="&lt;wnd ctrlid='16324' /&gt;&lt;ctrl name='Method_Details' role='list item' automationid='' check:text='Method_Details' /&gt;" Guid="919e74b4-e2aa-41e6-8ca9-0759b28184b0" InformativeScreenshot="3f56c32092880437496fd484484ac684.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='* in * on * as RPAUSER/A*' /&gt;" SearchSteps="Selector, CV" Version="V2" Visibility="Interactive">
+                              <uix:TargetAnchorable.Anchors>
+                                <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                                  <uix:Target CvTextArea="640, 393, 60, 12" CvTextArgument="Field Names" CvType="Text" DesignTimeRectangle="641, 393, 93, 13" ElementType="Text" FriendlyName="'Field Names'" FullSelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16326' title='Field Names' check:text='Field Names' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAGEAAAARCAYAAADNJMJiAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAADnSURBVFhH7ZjBCoNADETz7b302n/0B/yDLR4C4zhZtT0ktFl4rPtmtNBQhNqyLKPJxUav9GXruo4mlx5CAXZDMLMD7rHHRLnyV90/cRgCnq9ydwjsP/3cX6GHUIBLQ0DvXyI7laPHHHe+9rMTOc5Vhz26SkzfCehxj3yUK4eZ6jlnfZVHnjtVuPVL2HaGc79HndnN7kO4o669i6h+RW4PgTP0nKu+6qCLnhF1VK44yzP5agjso3zmtjO66BlRR+WR504V0l7MM4f3e4ad2bXjDj26SuyG0OTQQyiAPZ6v0eTSf2WnrzHe9v12Bg8g1UoAAAAASUVORK5CYII=" SearchSteps="Selector" />
+                                </scg:List>
+                              </uix:TargetAnchorable.Anchors>
+                            </uix:TargetAnchorable>
+                          </uix:NClick.Target>
+                        </uix:NClick>
+                        <Delay Duration="00:00:02" sap:VirtualizedContainerService.HintSize="388,90" sap2010:WorkflowViewState.IdRef="Delay_7" />
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="-8, -8, 1376, 744" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVFhH7ZKBbsMwCETz/1+VP8vuCChgg+u1rqxJQ3on4QB36nac53nt5G8GOI6rI5ubYTpAZlqR7Ve8DNAZXAMgnuxeyzBAOJgZVkCM7K6nDPCWcQvkVYg0QGXuq/1WAhmF6AKMzA98MKSfBUJaL/ELjQ4Kumx1mz5YiFGFDQjxfuIZGh2SBWDVmhv2a5T4aQjxfuIZGh2SBcDioedlnl8HsAEZVljLAhAI2ReAQP4D7AsAIWkAaTjgFlirA3g/8QwNBnwI1rIAEOL9xDM0OiQLgLUnAMESSw69C/cN3gTeTzy7Bx2UpVVAMnPx6x50eFkISGVOugDyqEsfh4Dc3H+S1Ct7JM+ykhlUQB7i/0Xn0z603EccmaEBiURzI9z3zQjsTRP3xiGmA3iw35HNGVkAIt/a4W+xPQDZHoBsDxA5rx8O21t/o+7/kQAAAABJRU5ErkJggg==" InformativeScreenshot="db2546d636b8bbbee28cb9e672b589e9.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='*on * as *' /&gt;" Title="Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*" />
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+                <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: Untitled in Interactive System Suitability on WAT19 as RPAUSER/Administrator - View" sap:VirtualizedContainerService.HintSize="484,746" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" ScopeGuid="51311df6-d3cc-4d51-8ac3-a6d93fdbef69" Version="V2">
+                  <uix:NApplicationCard.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,455" sap2010:WorkflowViewState.IdRef="Sequence_17">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <uix:NGetText DisplayName="Get Text 'client'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NGetText_2" ScopeIdentifier="51311df6-d3cc-4d51-8ac3-a6d93fdbef69" TextString="[TableView_MD]" Version="V3">
+                          <uix:NGetText.Target>
+                            <uix:TargetAnchorable DesignTimeRectangle="12, 85, 816, 137" DesignTimeScaleFactor="1" FriendlyName="'client'" FullSelectorArgument="&lt;wnd ctrlid='16325' /&gt;&lt;ctrl role='client' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlid='16325' /&gt;&lt;ctrl role='client' automationid='' /&gt;" Guid="524f6110-60e0-4bfa-a8e0-85204efe6794" ImageBase64="" InformativeScreenshot="6134d1c62c481636e60fccc63a3a12c0.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='* in * on * as RPAUSER/A*' /&gt;" SearchSteps="Selector" Version="V2" Visibility="Interactive" />
+                          </uix:NGetText.Target>
+                        </uix:NGetText>
+                        <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="388,143" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="[UiPath.Core.Activities.LogLevel.Info]" Message="[TableView_MD]" />
+                      </Sequence>
+                    </ActivityAction>
+                  </uix:NApplicationCard.Body>
+                  <uix:NApplicationCard.TargetApp>
+                    <uix:TargetApp Area="0, 0, 840, 440" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFDSURBVFhH7ZKBbsMwCETz/1+VP8vuCChgg+u1rqxJQ3on4QB36nac53nt5G8GOI6rI5ubYTpAZlqR7Ve8DNAZXAMgnuxeyzBAOJgZVkCM7K6nDPCWcQvkVYg0QGXuq/1WAhmF6AKMzA98MKSfBUJaL/ELjQ4Kumx1mz5YiFGFDQjxfuIZGh2SBWDVmhv2a5T4aQjxfuIZGh2SBcDioedlnl8HsAEZVljLAhAI2ReAQP4D7AsAIWkAaTjgFlirA3g/8QwNBnwI1rIAEOL9xDM0OiQLgLUnAMESSw69C/cN3gTeTzy7Bx2UpVVAMnPx6x50eFkISGVOugDyqEsfh4Dc3H+S1Ct7JM+ykhlUQB7i/0Xn0z603EccmaEBiURzI9z3zQjsTRP3xiGmA3iw35HNGVkAIt/a4W+xPQDZHoBsDxA5rx8O21t/o+7/kQAAAABJRU5ErkJggg==" InformativeScreenshot="742bfb84d752425792dd62dcf94b35ae.png" Selector="&lt;wnd app='project.exe' cls='AfxFrameOrView*' title='*on *as*' /&gt;" Title="Untitled in Interactive System Suitability on WAT19 as RPAUSER/A*" />
+                  </uix:NApplicationCard.TargetApp>
+                </uix:NApplicationCard>
+              </Sequence>
+              <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="546,52" sap2010:WorkflowViewState.IdRef="CommentOut_2">
+                <ui:CommentOut.Body>
+                  <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,327" sap2010:WorkflowViewState.IdRef="Sequence_18">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:InterruptibleDoWhile CurrentIndex="{x:Null}" Condition="[TableView_MD.Contains(ColumnItem)=False]" DisplayName="Do While" sap:VirtualizedContainerService.HintSize="388,216" sap2010:WorkflowViewState.IdRef="InterruptibleDoWhile_2">
+                      <ui:InterruptibleDoWhile.Body>
+                        <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="300,80" sap2010:WorkflowViewState.IdRef="Sequence_14">
+                          <sap:WorkflowViewStateService.ViewState>
+                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            </scg:Dictionary>
+                          </sap:WorkflowViewStateService.ViewState>
+                        </Sequence>
+                      </ui:InterruptibleDoWhile.Body>
+                      <sap:WorkflowViewStateService.ViewState>
+                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                        </scg:Dictionary>
+                      </sap:WorkflowViewStateService.ViewState>
+                    </ui:InterruptibleDoWhile>
+                  </Sequence>
+                </ui:CommentOut.Body>
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+              </ui:CommentOut>
+            </Sequence>
+          </ActivityAction>
+        </ui:ForEach.Body>
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+      </ui:ForEach>
+    </Sequence>
+  </Sequence>
+</Activity>

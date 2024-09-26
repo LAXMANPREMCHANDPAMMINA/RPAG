@@ -1,0 +1,142 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="testZero" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1240,1328" sap2010:WorkflowViewState.IdRef="testZero_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.CV</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>net45.Core</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.Database.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Testing.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="testZero" sap:VirtualizedContainerService.HintSize="546,1263" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:Int32" Name="test" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: WAT19 as RPAUSER/Administrator - Project" sap:VirtualizedContainerService.HintSize="484,1152" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="fa21ea2b-5e92-415f-82bc-9237bc74fb18" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="450,861" sap2010:WorkflowViewState.IdRef="Sequence_4">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'project.exe WAT19'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fa21ea2b-5e92-415f-82bc-9237bc74fb18" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="166, 120, 16, 22" DesignTimeScaleFactor="1" FriendlyName="'project.exe WAT19'" Guid="0c8ad618-1807-4809-b73c-6641786a5dc9" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAWCAYAAADJqhx8AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIoSURBVDhP3ZPNb9JwGMdn1IMXjcabiQe9mHjxJdGoFz3pzZsX48nEf8Co2cjUxZep2cyYTDdHZpVtgjCy2SFzwiKWAWLZeCtvpRTGnKWSwH/w9defwdjQxehuHr75pe33+fT7PH3a0Ww2sRFtHJAqS2BSEVzl3uLSh9f0dMUjiIk5jCXDSMtFw8KWOhJiHo6ADwN+Fpf9b3DIOYCT7iH08QsYjgdxM+ylkEajYQz4/SJbLuGe14UD9n4ccZrRHXpHzxvBWfCFLOr1uq5YU9sMskUR14IsdjE9ODMzgtPTw9g73osrC07MRIMoyCWUq1VUVqvGAE2exBccdDzG/slHtIVjU0+w48VtnHI/pWl6InOwC/z6gHhGoPPYPnYLbCGBZ2QWWprdL+9gy6gJW4muk5Sa1xCgxeuN+rB5tAsTQhQq6d2bi1OoluIsa4Utxq0PUGo1jJC3bnreicGlAKSVCkJ5Aa/Sn2mi4trqL68h4JuiYGiZowDL8ifa9/EpC01VrFZ0XkNAoSSha9GDbdZudC7O4gTZi4vzEwhnUm1eQwDHR2mf+yYf0u3UvoY59hGKWmvztgEkWcaDOTcOkwUyzbtw3mamIDvn1/la0gGUmoJAJvlzjUM+pPM5nLPcxR7bfTjee3SFLekAqqoiI4lYygpQv6v03gVrP3aSrTRNj4PPCUiT5ytrX40BRjL7WPJv9OGoa5AO1CMmIf8N4E/6HwAMw+DfxeAHEujCxi6tckgAAAAASUVORK5CYII=" InformativeScreenshot="a77768d12e77dceb31aee6bbc8177a43.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as RPAUSER/Administrator - Project' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'project.exe WAT19'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_2" InteractionMode="HardwareEvents" KeyModifiers="None" MouseButton="Right" ScopeIdentifier="fa21ea2b-5e92-415f-82bc-9237bc74fb18" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="165, 143, 19, 23" DesignTimeScaleFactor="1" FriendlyName="'project.exe WAT19'" Guid="3c72dc5b-dead-4834-8ee0-a84b01e57ab3" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAABMAAAAXCAYAAADpwXTaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABYSURBVDhPYzhw4MD/Dx8+UIQXLFjwH2TOqGHE44EwbPX/BIaE/6uxyiEwEYaBDGL4z0C5Yef+t5mCDKGay0B41DAkPBCGEYdHDSMdj0TDQBxK8YEDB/4DAPotKIqnRZpoAAAAAElFTkSuQmCC" InformativeScreenshot="1054848f300dbbf4d9581764db35bd8a.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as RPAUSER/Administrator - Project' /&gt;" SearchSteps="Image" TargetType="ImageBased" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'View As'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fa21ea2b-5e92-415f-82bc-9237bc74fb18" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 258, 195, 22" DesignTimeScaleFactor="1" FriendlyName="'View As'" FullSelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='View As' role='menu item' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Context' role='popup menu' /&gt;&lt;ctrl name='View As' role='menu item' automationid='' check:text='View As' /&gt;" Guid="14cda086-8a82-42be-87ad-f4794433f353" InformativeScreenshot="3506c20ec6f4cbf88a813fa8f6176a33.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Audit Records'" sap:VirtualizedContainerService.HintSize="388,157" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="fa21ea2b-5e92-415f-82bc-9237bc74fb18" Version="V3">
+              <uix:NClick.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="3, 157, 192, 22" DesignTimeScaleFactor="1" FriendlyName="'Audit Records'" FullSelectorArgument="&lt;ctrl name='View As' role='popup menu' /&gt;&lt;ctrl automationid='20592' /&gt;" FuzzySelectorArgument="&lt;ctrl name='View As' role='popup menu' /&gt;&lt;ctrl automationid='20592' role='menu item' check:text='Audit Records' /&gt;" Guid="2826f769-806d-47b0-b3c6-73f10c140ee9" InformativeScreenshot="92435975734db9984305edef4df02f41.png" ScopeSelectorArgument="&lt;wnd app='project.exe' cls='#32768' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V2" Visibility="Interactive" />
+              </uix:NClick.Target>
+            </uix:NClick>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="-8, -8, 1382, 744" FilePath="C:\Empower\Bin\project.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAElSURBVFhH7ZFBDoMwEAN5Ok/jZ7RmstEWOQmi0B5aS4Oi4DALTP90sg64Neu69lGH6vWxQoe6HLkuVtRDZzj6XuJBn+Ql9u3uRE7UxJbuRE7UxJZGTPNs948gJ2piSyN0dftHkBM1saUe2/X5Bc5+BTlRE1tqUVdlgDNDyIma2FKLKk67+f4R5ERNbMkh8bIsG9tODPNk3+0hJ2piS46vDhCrOoDEcbesoztCTtTElvZIUt88KG8fpDtd5ERNbCkTgtEA2kt3m8iJmthSJlbx+e0vKMSZHnKiJraUiYe/fIEk3Sj7caaHnKiJLe05MkDu95ATNbElRwxRf0HC9VvIiZrYUou6OikXcqImttSirr41wBXIiZrY0p3IiZrExqf55+czTQ9OnSFbNCa9OgAAAABJRU5ErkJggg==" InformativeScreenshot="37ddd929fad156df055609decdfdd599.png" Selector="&lt;wnd app='project.exe' cls='Afx:*' title='WAT19 as RPAUSER/Administrator - Project' /&gt;" Title="WAT19 as RPAUSER/Administrator - Project" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>
